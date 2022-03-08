@@ -8,16 +8,23 @@ div {
   box-sizing: border-box;
 }
 
+li {
+  list-style-type: none; 
+ }
+ ul {
+  margin: 0; 
+  padding: 0; 
+ }
 
-  header {
+  .header {
     width: 100%;
-    height: 450px;
     position: relative;
-    background: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg)
-      no-repeat center top / cover;
+    background: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg) no-repeat center top / cover;
+    padding-top: 27px;
+    padding-bottom: 146px;
   }
 
-  header:after {
+  .header:after {
     position: absolute;
     content: "";
     background-color: #000;
@@ -38,44 +45,36 @@ div {
 
   .logo {
     width: 179px;
-    height: 41;
-    float: left;
-    margin-top: 27px;
   }
 
   nav {
-    float: right;
-    margin-top: 44px;
+  display: flex;
+  justify-content: space-between;
   }
 
   .menu {
-    display: block;
+    display: flex;
     margin: 0;
     padding: 0;
   }
 
   .menu li {
-    float: left;
     display: block;
     margin-right: 36px;
   }
 
-  .menu a {
+  .menu-link-item {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 13px;
   }
 
-  .clearfix:after {
-    content: "";
-    display: table;
-    width: 100%;
-    clear: both;
+  .menu-link-item:hover {
+    text-decoration: underline #fff;
   }
-
+  
   .header-title {
-    display: inline-blok;
     font-size: 45px;
     color: #fff;
     font-weight: bold;
@@ -127,14 +126,16 @@ div {
     width: 25%;
     position: relative;
     z-index: 1;
-    height: 320px;
+    min-height: 320px;
     margin-right: 4px;
     padding: 16px 24px;
     align-items: flex-end;
   }
+
 .card:last-child {
   margin-right: 0;
 }
+
   .card:after {
     position: absolute;
     content: "";
@@ -162,7 +163,16 @@ div {
     word-spacing: 20px;
   }
 
-  .card-description h2 {
+  .card-description-link {
+    text-decoration: none;  
+  }
+
+  /* как правильно убрать стили :-webkit-any()? */
+  a:-webkit-any-link {
+    text-decoration: none !important; 
+  }
+
+  .card-description-title a {
     font-size: 20px;
     color: #fff;
     text-transform: uppercase;
@@ -213,14 +223,13 @@ div {
     margin-left: 30px;
   }
 
-  .post-title p {
+  .post-title > a {
     font-size: 14px;
     color: #b59f5b;
     text-transform: uppercase;
     word-spacing: 20px;
     display:block;
-    padding-bottom: 12px;
-    margin: 0;
+    margin-bottom: 12px;
   }
 
   .post-title h2 {
@@ -230,13 +239,12 @@ div {
   }
 
   .post-description {
-    display: block;
     font-size: 15px;
   }
 
   .post-date-and-author {
-    padding-top: 36px;
-    padding-bottom: 54px;
+    margin-top: 36px;
+    margin-bottom: 54px;
   }
   .post-date {
     color: #989898;
@@ -255,13 +263,13 @@ div {
 .side-bar {
   width: 270px;
   margin-top: 64px;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  
 }
 
 .side-bar-title {
   text-transform: uppercase;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 14px;
@@ -282,8 +290,8 @@ div {
 
 .side-bar-posts {
   margin-top: 30px;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  
 }
 .side-bar-post {
   display: flex;
@@ -295,11 +303,12 @@ div {
 }
 
 .side-bar-post-description {
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .side-bar-post-description h2 {
   font-size: 14px;
+  text-transform: uppercase;
   margin: 0;
 }
 
@@ -329,15 +338,17 @@ div {
   border: none;
   outline: none;
   cursor: pointer;
-  
-  
+  margin: 0;
+  padding: 0;
 }
+
 .search-icon {
   width: 22px;
   height: 22px;
   fill: #fff;
   pointer-events: none;
-
+  background: url(../svg/search.svg) no-repeat center top / cover;
+  margin: 0 auto;
 }
 
 .subscribe-titel {
@@ -363,7 +374,7 @@ margin-top: 14px;
 }
 
 .subscribe-mail {
-  width: 270px;
+  width: 100%;
   height: 48px;
   background-color: #f4f7f6;
   outline: none;
@@ -373,7 +384,7 @@ margin-top: 14px;
 }
 
 .subscribe-button {
-  width: 270px;
+  width: 100%;
   height: 48px;
   box-sizing: border-box;
   padding: 18px 76px;
@@ -384,6 +395,7 @@ margin-top: 14px;
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 60px;
+  cursor: pointer;
 }
 
 .tags {
@@ -421,7 +433,6 @@ width: 270px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
-  line-height: 12px;
   color: #0f0d0e;
   box-sizing: border-box;
   padding: 6px 14px;
@@ -520,7 +531,6 @@ flex-direction: column;
 
 .shop-post-item {
   width: 33%;
-  height: 438px;
   padding-top: 172px;
   margin-right: 60px;
 }
@@ -542,8 +552,6 @@ flex-direction: column;
 }
 
 .shop-post-description {
-  width: 346px;
-  height: 264px;
   border: 3px solid #b59f5b;
   padding-top: 54px;
   padding-left: 22px;
@@ -586,6 +594,7 @@ flex-direction: column;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .shop-post-price {
@@ -606,26 +615,44 @@ text-decoration: line-through;
 
 .social-media {
   margin-top: 66px;
-  height: 82px;
   background-color: #f4f7f6;
-  display: flex;
-  align-items: center;
 }
 
 .social-media-list {
   display: flex;
   width: 215px;
   height: 22px;
-  margin: auto;
+  align-items: center;
 }
 
 .social-media-item {
   width: 24px;
   height: 24px;
-  margin: auto;
+  margin-right: 30px;
 }
-.social-media-item img {
-  width: 100%;
+
+.social-media-item:last-child {
+  margin-right: 0;
+}
+
+.social-media-tumblr {
+  background: url(../svg/003-tumblr.svg) no-repeat center top / cover;
+}
+
+.social-media-instagram {
+  background: url(../svg/005-instagram.svg) no-repeat center top / cover;
+}
+
+.social-media-facebook {
+  background: url(../svg/002-facebook-logo.svg) no-repeat center top / cover;
+}
+
+.social-media-pinterest {
+  background: url(../svg/001-pinterest.svg) no-repeat center top / cover;
+}
+
+.social-media-twitter {
+  background: url(../svg/004-twitter.svg) no-repeat center top / cover;
 }
 
 /* POPUP */
@@ -662,7 +689,7 @@ text-decoration: line-through;
 }
 
 @media (max-width:640px) {
-  header {
+  .header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -672,7 +699,6 @@ text-decoration: line-through;
   .logo {
     width: 270px;
     height: 60px;
-    
   }
 
   .menu {
@@ -720,6 +746,10 @@ text-decoration: line-through;
     flex-direction: column;
   }
 
+  .post-title-link {
+    margin-top: 16px;
+  }
+
   .post > img {
     height: 254px;
     max-width: 100%;
@@ -741,8 +771,6 @@ text-decoration: line-through;
     align-items: center;
   }
 
-
-
   .shop-container {
     display:flex;
     flex-direction: column;
@@ -750,7 +778,7 @@ text-decoration: line-through;
 }
 
 @media (min-width: 641px) and (max-width: 1200px) {
-header {
+.header {
 height: 392px;
 }
 
@@ -785,20 +813,13 @@ height: 392px;
   margin-right: 3px;
   margin-bottom: 3px;
   padding: 15px 19px;
-
 }
 
-
-
-/* .card-description{
-padding: ;
-} */
-
-.card-description > p {
+.card-description-link > p {
 font-size: 14px;
 }
 
-.card-description > h2 {
+.card-description-title > a {
   font-size: 17px;
 }
 .main {
@@ -821,11 +842,11 @@ font-size: 14px;
   margin: 0;
 }
 
-.post-title h2 {
+.post-title > h2 {
   font-size: 17px;
 }
 
-.post-title > p {
+.post-title-link {
   margin-top: 16px;
 }
 
@@ -842,7 +863,7 @@ font-size: 14px;
   width: 100%;
 }
 
-.shop-title > h2 {
+.shop-title-item > h2 {
 font-size: 18px;
 }
 
