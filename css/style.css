@@ -136,7 +136,7 @@ li {
     min-height: 320px;
     margin-right: 4px;
     align-items: flex-end;
-    padding: 158px 20px 16px;
+    padding: 16px 20px;
   }
 
 .card:last-child {
@@ -223,13 +223,13 @@ li {
 
   .posts {
     width: 100%;
+    margin-right: 78px;
   }
 
   .post {
     display: flex;
     margin-bottom: 58px;
     align-items: flex-start;
-    margin-right: 78px;
   }
 
   .post:last-child {
@@ -334,6 +334,10 @@ li {
   margin-top: 30px;
 }
 
+.side-bar-post-img {
+  object-fit: cover;
+}
+
 .side-bar-post {
   display: flex;
   margin-bottom: 22px;
@@ -408,9 +412,7 @@ li {
 
 .subscribe-titel {
   text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   margin-bottom: 40px;
 }
 
@@ -420,6 +422,7 @@ display: block;
 width: 66px;
 height: 3px;
 background-color: #e1d9bd;
+margin: auto;
 margin-top: 14px;
 }
 
@@ -585,9 +588,11 @@ display: block;
 
 .shop-post-item {
   width: 33%;
-  padding-top: 172px;
+  /* padding-top: 172px; */
   margin-right: 60px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .shop-post-item:last-child {
@@ -595,11 +600,15 @@ display: block;
 }
 
 .shop-post-image {
-  position: absolute;
-  top: 0;
+  /* position: absolute; */
+  /* top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
   z-index: -1;
+  display: block;
+  margin: auto;
+  margin-bottom: -30px;
+  /* margin-left: 23px; */
 }
 
 .shop-post-description {
@@ -610,6 +619,7 @@ display: block;
   padding-bottom: 22px;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .shop-post-description-title {
@@ -663,10 +673,11 @@ text-decoration: line-through;
 .new-price {
   font-size: 20px;
 }
-
+.footer {
+  margin-top: 66px;
+}
 .social-media {
   justify-content: center;
-  margin-top: 66px;
   background-color: #f4f7f6;
   display: flex;
   padding: 30px 0;
@@ -674,7 +685,7 @@ text-decoration: line-through;
 
 .social-media-list {
   display: flex;
-  width: 215px;
+  /* width: 215px; */
   justify-content: space-between;
 }
 
