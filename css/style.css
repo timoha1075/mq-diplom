@@ -836,9 +836,45 @@ display:;
 outline: 1px solid #b59f5b;
 }
 
-.radio-button-label {
+.radio-label {
   margin-top: 32px;
   margin-bottom: 12px;
+}
+
+.radio-btn {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px 1px 1px 1px);
+}
+
+.custom-radio-btn {
+  position: relative;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background: #fff;
+  border:  1px solid #b59f5b;
+  border-radius: 50%;
+  vertical-align: text-top;
+}
+
+.custom-radio-btn::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: #b59f5b;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  margin-right: 5px;
+}
+
+.radio-btn:checked ~ .custom-radio-btn::before {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 @media (max-width:640px) {
