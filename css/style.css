@@ -47,6 +47,10 @@ li {
     width: 179px;
   }
 
+  .burger-menu-img {
+    display: none;
+  }
+
   .navigation {
   display: flex;
   justify-content: space-between;
@@ -769,7 +773,7 @@ color: #999999;
 }
 
 ._hidden {
-display:;
+display: none;
 }
 
 .popup {
@@ -832,6 +836,7 @@ display:;
   background-size: 10px;
   background-position: right 14px center;
 }
+
 .select:focus {
 outline: 1px solid #b59f5b;
 }
@@ -857,13 +862,14 @@ outline: 1px solid #b59f5b;
   border:  1px solid #b59f5b;
   border-radius: 50%;
   vertical-align: text-top;
+  margin-left: 5px;
 }
 
 .custom-radio-btn::before {
   content: "";
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   background: #b59f5b;
   border-radius: 50%;
   position: absolute;
@@ -917,6 +923,9 @@ outline: 1px solid #b59f5b;
   cursor: pointer;
 }
 
+.popup-btn:hover {
+  background-color: #323232;
+}
 @media (max-width:640px) {
   .header {
     display: flex;
