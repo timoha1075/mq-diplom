@@ -12,7 +12,9 @@
 		<div class="container">
 			<nav class="navigation">
 				<a href="#"><img src="./svg/noemi-logo.svg" alt="логотип" class="logo"></a>
-				<a class="berger-menu" href="#"><img src="" alt="меню" class="burger-menu-img"></a>
+				<button class="menu-btn">
+					<span class="menu-btn-text">открыть меню</span>
+				  </button>
 				<ul class="menu-list">
 					<li class="menu-list-item">
 						<a class="menu-link-item" href="#">Главная</a>
@@ -439,12 +441,14 @@
 		</footer>
 		<div class="popup-overlay _hidden">
 			<div class="popup">
-				<div class="popup-close"></div>
+			<form action="" method="post">
+				<button class="popup-close-btn">
+					<span class="popup-close-btn-text">кнопка закрыть</span>
+				</button>
 				<div class="popup-heder">
 					<h2 class="popup-title">Ваш фидбек</h2>
 				</div>
 				<div class="popup-content">
-					<form action="" method="post">
 						<label class="select-group">
 							<span class="select-label">Как часто вы заходите на сайт?</span>
 								<select class="select" name="time" id="">
@@ -454,11 +458,10 @@
 									<option value="">Несколько раз в год</option>
 								</select>
 						</label>
-					</form>
+					
 					<div class="radio-label">
 						<p class="radio-button-label">Вы подписаны на e-mail рассылку?</p>
 					</div>
-					<form action="" method="post">
 						<label>
 							<input class="radio-btn" type="radio" name="question" value="yes" checked>
 							<span class="custom-radio-btn"></span>
@@ -469,14 +472,12 @@
 							<span class="custom-radio-btn"></span>
 							Нет
 						</label>
-					</form>
+
 					<div class="textarea-label">
 						<p class="textarea-title">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</p>
-						<form action="" method="post">
-							<label>
-								<textarea class="textarea" name="content" rows="4" placeholder="Может, больше рецептов?"></textarea>
-							</label>
-						</form>
+						<label>
+							<textarea class="textarea" name="content" rows="5" placeholder="Может, больше рецептов?"></textarea>
+						</label>
 					</div>
 					
 				</div>
@@ -486,6 +487,7 @@
 						<button class="popup-btn">Отправить</button>
 					</div>
 				</div>
+			</form>
 			</div>
 		</div>
 	</body>
