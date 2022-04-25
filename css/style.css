@@ -951,10 +951,6 @@ outline: 1px solid #b59f5b;
     align-items: center;
   }
 
-  .navigation:last-child {
-    align-items: flex-end;
-  }
-
   .logo {
     width: 270px;
     height: 60px;
@@ -962,7 +958,7 @@ outline: 1px solid #b59f5b;
   }
 
   .menu-btn {
-    display: flex;
+    display: inline-flex;
     width: 25px;
     height: 20px;
     border: none;
@@ -971,7 +967,7 @@ outline: 1px solid #b59f5b;
     position: relative;
     cursor: pointer;
     text-indent: -9999px;
-    align-items: center;
+    margin-left: auto;
   }
   
   .menu-btn-text {
