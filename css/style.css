@@ -391,7 +391,7 @@ li {
 
 .search-field {
   background-color: #f4f7f6;
-  width: 220px;
+  min-width: 220px;
   height: 50px;
   outline: none;
   border: none;
@@ -613,7 +613,6 @@ display: block;
 
 .shop-post-item {
   width: 33%;
-  /* padding-top: 172px; */
   margin-right: 60px;
   position: relative;
   display: flex;
@@ -625,15 +624,10 @@ display: block;
 }
 
 .shop-post-image {
-  /* position: absolute; */
-  /* top: 0;
-  left: 50%;
-  transform: translateX(-50%); */
   z-index: -1;
   display: block;
   margin: auto;
   margin-bottom: -30px;
-  /* margin-left: 23px; */
 }
 
 .shop-post-description {
@@ -698,9 +692,12 @@ text-decoration: line-through;
 .new-price {
   font-size: 20px;
 }
+
 .footer {
   margin-top: 66px;
+  padding: 0;
 }
+
 .social-media {
   justify-content: center;
   background-color: #f4f7f6;
@@ -953,7 +950,6 @@ outline: 1px solid #b59f5b;
 
   .logo {
     width: 270px;
-    height: 60px;
     margin-top: 176px;
   }
 
@@ -1076,7 +1072,6 @@ outline: 1px solid #b59f5b;
   }
 
   .post > img {
-    height: 254px;
     max-width: 100%;
     object-fit: cover;
     overflow: hidden;
@@ -1084,6 +1079,10 @@ outline: 1px solid #b59f5b;
 
   .post-body {
     margin-left: 0;
+  }
+
+  .side-bar {
+    width: 100%;
   }
 
   .side-bar-title {
@@ -1112,7 +1111,7 @@ outline: 1px solid #b59f5b;
 
   .footer {
     flex-direction: column;
-    margin-right: 0;
+    padding: 0 15px;
   }
 
 @media (min-width: 641px) and (max-width: 1200px) {
@@ -1218,6 +1217,10 @@ font-size: 14px;
   font-size: 17px;
 }
 
+.footer {
+  padding: 0 34px;
+}
+
 @media (orientation: landscape) {
   .card {
     width: calc(25% - 9px);
@@ -1230,7 +1233,6 @@ font-size: 14px;
 }
 
 .main {
-  padding: 0 32px;
   margin-top: 51px;
 }
 
