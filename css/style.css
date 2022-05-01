@@ -476,6 +476,10 @@ margin-top: 14px;
   cursor: pointer;
 }
 
+.subscribe-button:hover {
+  background-color: #0f0d0e;
+}
+
 .subscribe {
   margin-bottom: 60px;
 }
@@ -628,6 +632,16 @@ display: block;
   display: block;
   margin: auto;
   margin-bottom: -30px;
+  width: 100%;
+}
+
+.shop-post-img-container {
+  width: 100%;
+  padding: 0 26px;
+}
+
+.shop-post-picture {
+  width: 100%;
 }
 
 .shop-post-description {
@@ -675,6 +689,10 @@ display: block;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
+}
+
+.shop-post-footer-button:hover {
+  background-color: #0f0d0e;
 }
 
 .shop-post-price {
@@ -1089,6 +1107,14 @@ outline: 1px solid #b59f5b;
     margin-top: 46px;
   }
 
+  .search-field-container {
+    width: 100%
+  }
+
+  .search-field {
+    width: 100%
+  }
+
   .shop-post {
     display: flex;
     flex-direction: column;
@@ -1197,8 +1223,17 @@ padding-bottom: 124px;
 
 .trends-card {
   flex-wrap: wrap;
-  margin-right: -3px;
-  margin-bottom: -3px;
+}
+
+@media (orientation: landscape) {
+  .card {
+    width: calc(25% - 9px);
+    margin-right: 3px;
+  }
+
+  .card:last-child {
+    margin-right: 0;
+  }
 }
 
 .card {
@@ -1207,6 +1242,10 @@ padding-bottom: 124px;
   margin-right: 3px;
   margin-bottom: 3px;
   padding: 15px 19px;
+}
+
+.card:nth-child(2n) {
+margin-right: 0;
 }
 
 .card-description-link {
@@ -1219,17 +1258,6 @@ font-size: 14px;
 
 .footer {
   padding: 0 34px;
-}
-
-@media (orientation: landscape) {
-  .card {
-    width: calc(25% - 9px);
-    margin-right: 3px;
-  }
-
-  .card:last-child {
-    margin-right: 0;
-  }
 }
 
 .main {
